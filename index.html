@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Helen Cafe | Specialty Coffee & Brunch in Hawthorn, Melbourne</title>
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Saint Helen Cafe: specialty coffee, healthy brunch, vegetarian & vegan options in Hawthorn. Visit us at 173 Riversdale Rd. Open Mon-Sat.">
+    <meta name="keywords" content="Saint Helen Cafe, coffee Hawthorn, brunch Melbourne, vegan cafe, vegetarian Hawthorn, specialty coffee, healthy food">
+    <meta name="author" content="Saint Helen Cafe">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.sainthelencafe.com.au/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Saint Helen Cafe | Specialty Coffee & Brunch">
+    <meta property="og:description" content="Rustic brick walls, cozy atmosphere, quality food with vegan & vegetarian options. Come for breakfast, brunch or lunch.">
+    <meta property="og:url" content="https://www.sainthelencafe.com.au/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=630&fit=crop&auto=format">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="Saint Helen Cafe">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saint Helen Cafe | Specialty Coffee & Brunch">
+    <meta name="twitter:description" content="Rustic brick walls, cozy atmosphere, quality food with vegan & vegetarian options.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=630&fit=crop&auto=format">
+
+    <!-- Favicon (emoji como SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+
+    <!-- Preconnect para fuentes y Unsplash -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Google Fonts con display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD para LocalBusiness / Restaurant -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Saint Helen Cafe",
+        "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "173 Riversdale Rd",
+            "addressLocality": "Hawthorn",
+            "addressRegion": "VIC",
+            "postalCode": "3122",
+            "addressCountry": "AU"
+        },
+        "telephone": "+61 402 222 363",
+        "email": "hola@sainthelencafe.com.au",
+        "url": "https://www.sainthelencafe.com.au/",
+        "servesCuisine": ["Coffee", "Brunch", "Healthy", "Vegetarian", "Vegan"],
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday"],
+                "opens": "07:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "14:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "14:30"
+            }
+        ],
+        "acceptsReservations": true,
+        "hasMenu": "https://www.sainthelencafe.com.au/#menu"
+    }
+    </script>
+
+    <style>
+        /* ==================== CSS VARIABLES ==================== */
+        :root {
+            /* Colores cálidos y terrosos */
+            --color-cafe: #2C1E1A;
+            --color-cafe-claro: #4A312A;
+            --color-crema: #FDF8F3;
+            --color-crema-oscuro: #F5E8DC;
+            --color-terracota: #C67B5C;
+            --color-terracota-oscuro: #A85C3E;
+            --color-verde: #7E8F68;
+            --color-verde-oscuro: #5F7050;
+            --color-dorado: #C9A96E;
+            --color-blanco: #FFFFFF;
+            --color-texto: #2C1E1A;
+            --color-texto-suave: #5D4A40;
+            --color-error: #B3402A;
+
+            /* Tipografías */
+            --font-titulos: 'Playfair Display', Georgia, serif;
+            --font-texto: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+
+            /* Transiciones y bordes */
+            --transicion: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            --max-width: 1200px;
+            --header-height: 70px;
+
+            /* Sombras */
+            --sombra-suave: 0 2px 8px rgba(44, 30, 26, 0.08);
+            --sombra-media: 0 6px 20px rgba(44, 30, 26, 0.12);
+            --sombra-fuerte: 0 12px 30px rgba(44, 30, 26, 0.2);
+        }
+
+        /* ==================== RESET & BASE ==================== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-texto);
+            color: var(--color-texto);
+            background-color: var(--color-crema);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transicion);
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-titulos);
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-cafe);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+        h3 { font-size: 1.25rem; }
+        h4 { font-size: 1rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--color-texto-suave);
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Skip link para accesibilidad */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--color-terracota);
+            color: var(--color-blanco);
+            font-weight: 700;
+            z-index: 2000;
+            transition: top 0.2s;
+        }
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+            color: var(--color-blanco);
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            font-family: var(--font-texto);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transicion);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--color-dorado);
+            outline-offset: 2px;
+        }
+
+        .btn--primary {
+            background-color: var(--color-terracota);
+            color: var(--color-blanco);
+            box-shadow: 0 4px 16px rgba(198, 123, 92, 0.35);
+        }
+        .btn--primary:hover {
+            background-color: var(--color-terracota-oscuro);
+            box-shadow: 0 6px 24px rgba(198, 123, 92, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-blanco);
+            border: 2px solid var(--color-blanco);
+            backdrop-filter: blur(4px);
+        }
+        .btn--secondary:hover {
+            background-color: var(--color-blanco);
+            color: var(--color-cafe);
+            transform: translateY(-2px);
+        }
+
+        .btn--green {
+            background-color: var(--color-verde);
+            color: var(--color-blanco);
+            box-shadow: 0 4px 16px rgba(126, 143, 104, 0.35);
+        }
+        .btn--green:hover {
+            background-color: var(--color-verde-oscuro);
+            box-shadow: 0 6px 24px rgba(126, 143, 104, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Animaciones de aparición */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Respetar preferencia de movimiento reducido */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            .fade-in {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+            .btn,
+            .menu-item,
+            .testimonial-item,
+            .contact-item {
+                transition: none;
+            }
+        }
+
+        /* ==================== HEADER ==================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(44, 30, 26, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+            padding: 0.8rem 0;
+        }
+
+        .header.is-scrolled {
+            background-color: rgba(44, 30, 26, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            padding: 0.5rem 0;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--font-titulos);
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            font-weight: 700;
+            color: var(--color-blanco);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .logo__icon {
+            font-size: 1.4em;
+        }
+        .logo__highlight {
+            color: var(--color-terracota);
+        }
+
+        /* Navegación */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+        }
+        .nav__link {
+            color: var(--color-crema);
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            position: relative;
+            padding: 0.4rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-terracota);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+        .nav__link:hover,
+        .nav__link:focus-visible {
+            color: var(--color-blanco);
+        }
+        .nav__link:hover::after,
+        .nav__link:focus-visible::after,
+        .nav__link[aria-current="page"]::after {
+            width: 100%;
+        }
+        .nav__link--book {
+            background-color: var(--color-terracota);
+            color: var(--color-blanco);
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .nav__link--book::after {
+            display: none;
+        }
+        .nav__link--book:hover {
+            background-color: var(--color-terracota-oscuro);
+            transform: translateY(-1px);
+        }
+
+        /* Botón hamburguesa */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 1100;
+            min-height: 48px;
+            min-width: 48px;
+        }
+        .hamburger__line {
+            width: 28px;
+            height: 2.5px;
+            background-color: var(--color-blanco);
+            border-radius: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .hamburger[aria-expanded="true"] .hamburger__line:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger[aria-expanded="true"] .hamburger__line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger[aria-expanded="true"] .hamburger__line:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* Menú móvil */
+        .nav-mobile {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: min(75%, 320px);
+            height: 100vh;
+            background-color: var(--color-cafe);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            transition: right 0.4s ease;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.4);
+            z-index: 1050;
+            display: flex;
+        }
+        .nav-mobile.is-open {
+            right: 0;
+        }
+        .nav-mobile .nav__link {
+            font-size: 1.2rem;
+        }
+        .nav-mobile .nav__link--book {
+            padding: 0.7rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            padding: calc(var(--header-height) + 2rem) 1.5rem 4rem;
+            color: var(--color-blanco);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                rgba(44,30,26,0.8) 0%,
+                rgba(44,30,26,0.6) 50%,
+                rgba(44,30,26,0.8) 100%);
+        }
+        .hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        .hero__subtitle {
+            font-family: var(--font-titulos);
+            font-style: italic;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--color-dorado);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        .hero__title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            color: var(--color-blanco);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+        .hero__tagline {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            font-weight: 300;
+            color: var(--color-crema);
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .hero__buttons {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ==================== SECCIONES GENERALES ==================== */
+        .section {
+            padding: 6rem 0;
+        }
+        .section--cream {
+            background-color: var(--color-crema);
+        }
+        .section--dark {
+            background-color: var(--color-cafe);
+            color: var(--color-blanco);
+        }
+        .section__title {
+            text-align: center;
+            margin-bottom: 0.8rem;
+        }
+        .section__subtitle {
+            text-align: center;
+            font-family: var(--font-titulos);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--color-texto-suave);
+            margin-bottom: 3rem;
+        }
+        .section--dark .section__title,
+        .section--dark .section__subtitle {
+            color: var(--color-crema);
+        }
+
+        /* ==================== SOBRE NOSOTROS ==================== */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about__image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--sombra-fuerte);
+            position: relative;
+            aspect-ratio: 4/3;
+        }
+        .about__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .about__image:hover img {
+            transform: scale(1.03);
+        }
+        .about__text h2 {
+            text-align: left;
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .about__text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-terracota);
+            border-radius: 2px;
+        }
+        .about__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        .tag {
+            background-color: var(--color-crema-oscuro);
+            color: var(--color-cafe);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            border: 1px solid transparent;
+        }
+        .tag:hover {
+            background-color: var(--color-terracota);
+            color: var(--color-blanco);
+            transform: translateY(-2px);
+        }
+
+        /* ==================== MENÚ ==================== */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .menu-item {
+            background: var(--color-crema);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--sombra-media);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--sombra-fuerte);
+        }
+        .menu-item__image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+        }
+        .menu-item__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .menu-item:hover .menu-item__image img {
+            transform: scale(1.08);
+        }
+        .menu-item__badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: var(--color-verde);
+            color: var(--color-blanco);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 1;
+        }
+        .menu-item__badge--vegan {
+            background-color: var(--color-verde-oscuro);
+        }
+        .menu-item__badge--vegetarian {
+            background-color: var(--color-dorado);
+        }
+        .menu-item__content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .menu-item__title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .menu-item__desc {
+            font-size: 0.9rem;
+            color: var(--color-texto-suave);
+            flex: 1;
+            margin-bottom: 0.8rem;
+        }
+        .menu-item__price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-terracota);
+            font-family: var(--font-titulos);
+        }
+
+        /* ==================== HORARIOS & UBICACIÓN ==================== */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        .hours-card {
+            background-color: var(--color-blanco);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--sombra-media);
+            border: 1px solid rgba(198,123,92,0.15);
+        }
+        .hours-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0;
+            border-bottom: 1px dashed rgba(44,30,26,0.12);
+        }
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+        .hours-row__day {
+            font-weight: 700;
+        }
+        .hours-row__time {
+            color: var(--color-texto-suave);
+        }
+        .hours-row--closed .hours-row__time {
+            color: var(--color-terracota);
+            font-weight: 700;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.6rem 0.8rem;
+            background-color: var(--color-crema);
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .service-item:hover {
+            background-color: var(--color-crema-oscuro);
+            transform: translateX(3px);
+        }
+        .service-item__icon {
+            font-size: 1.2rem;
+        }
+        .map-wrapper {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--sombra-media);
+            border: 1px solid rgba(44,30,26,0.1);
+            min-height: 400px;
+        }
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: 0;
+        }
+
+        /* ==================== TESTIMONIOS ==================== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            transition: background 0.3s, transform 0.3s, border-color 0.3s;
+        }
+        .testimonial:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .testimonial__stars {
+            color: var(--color-dorado);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        .testimonial__text {
+            color: var(--color-crema);
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+        .testimonial__author {
+            color: var(--color-blanco);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .testimonial__author::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: var(--color-terracota);
+            border-radius: 2px;
+        }
+
+        /* ==================== CONTACTO ==================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.2rem;
+            background-color: var(--color-blanco);
+            border-radius: var(--border-radius);
+            box-shadow: var(--sombra-suave);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--sombra-media);
+        }
+        .contact-item__icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-crema-oscuro);
+            border-radius: 50%;
+        }
+        .contact-item h4 {
+            margin-bottom: 0.2rem;
+        }
+        .contact-item a {
+            color: var(--color-texto-suave);
+            word-break: break-word;
+        }
+        .contact-item a:hover {
+            color: var(--color-terracota);
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .social-link {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-cafe);
+            color: var(--color-blanco);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(44,30,26,0.25);
+        }
+        .social-link:hover {
+            background-color: var(--color-terracota);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(198,123,92,0.4);
+        }
+        .contact-form {
+            background-color: var(--color-blanco);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--sombra-media);
+            border: 1px solid rgba(198,123,92,0.15);
+        }
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.3px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--color-crema-oscuro);
+            border-radius: 8px;
+            font-family: var(--font-texto);
+            font-size: 0.95rem;
+            color: var(--color-texto);
+            background-color: var(--color-crema);
+            transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+            outline: none;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-terracota);
+            background-color: var(--color-blanco);
+            box-shadow: 0 0 0 4px rgba(198,123,92,0.1);
+        }
+        .form-group textarea {
+            min-height: 130px;
+        }
+        .form-group .error-message {
+            display: none;
+            color: var(--color-error);
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            font-weight: 700;
+        }
+        .form-group.has-error input,
+        .form-group.has-error textarea {
+            border-color: var(--color-error);
+        }
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        .form-success {
+            display: none;
+            background-color: var(--color-verde);
+            color: var(--color-blanco);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        .form-success.is-visible {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        /* Honeypot (oculto) */
+        .form-group--honeypot {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background-color: var(--color-cafe);
+            color: var(--color-crema);
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer__logo {
+            font-family: var(--font-titulos);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .footer__social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .footer__social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer__social a:hover {
+            background-color: var(--color-terracota);
+            transform: translateY(-3px);
+        }
+        .footer__info {
+            font-size: 0.85rem;
+            opacity: 0.75;
+            margin-bottom: 0.5rem;
+        }
+        .footer__copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer__heart {
+            color: var(--color-terracota);
+            display: inline-block;
+            animation: heartbeat 1.5s ease infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* ==================== 404 ==================== */
+        .not-found {
+            text-align: center;
+            padding: 10rem 1.5rem;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .not-found__code {
+            font-family: var(--font-titulos);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--color-terracota);
+            line-height: 1;
+        }
+        .not-found__message {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .menu-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 60px;
+            }
+            .header .container {
+                gap: 0.5rem;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav {
+                display: none;
+            }
+            .nav-mobile.is-open {
+                right: 0;
+            }
+            .about,
+            .hours-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about__text h2 {
+                text-align: center;
+            }
+            .about__text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .section {
+                padding: 4rem 0;
+            }
+            .hero {
+                background-attachment: scroll;
+                min-height: 85vh;
+            }
+            .hero__buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .hero__buttons .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__title {
+                letter-spacing: 1px;
+            }
+            .logo {
+                font-size: 1.2rem;
+            }
+            .menu-item__image {
+                height: 180px;
+            }
+            .hours-card,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header" role="banner">
+        <div class="container">
+            <a href="#main" class="logo" aria-label="Saint Helen Cafe home">
+                <span class="logo__icon" aria-hidden="true">☕</span>
+                Saint Helen <span class="logo__highlight">Cafe</span>
+            </a>
+
+            <!-- Navegación escritorio -->
+            <nav class="nav" id="desktopNav" role="navigation" aria-label="Main navigation">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#menu" class="nav__link">Menu</a>
+                <a href="#hours-location" class="nav__link">Hours & Location</a>
+                <a href="#testimonials" class="nav__link">Reviews</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="nav__link nav__link--book">Book a Table</a>
+            </nav>
+
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <nav class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#menu" class="nav__link">Menu</a>
+        <a href="#hours-location" class="nav__link">Hours & Location</a>
+        <a href="#testimonials" class="nav__link">Reviews</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="#contact" class="nav__link nav__link--book">Book a Table</a>
+    </nav>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <main id="main" role="main">
+
+        <!-- HERO -->
+        <section class="hero" id="home" aria-label="Hero">
+            <div class="hero__content">
+                <p class="hero__subtitle">Welcome to</p>
+                <h1 class="hero__title">Saint Helen Cafe</h1>
+                <p class="hero__tagline">Specialty Coffee · Brunch · Healthy Food</p>
+                <div class="hero__buttons">
+                    <a href="#menu" class="btn btn--primary">View Menu</a>
+                    <a href="#contact" class="btn btn--secondary">Book a Table</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section section--cream" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about">
+                    <div class="about__image fade-in">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                             alt="Cozy interior of Saint Helen Cafe with brick walls and warm lighting"
+                             loading="lazy" decoding="async" width="800" height="600">
+                    </div>
+                    <div class="about__text fade-in">
+                        <h2 id="about-title">A space to feel at home</h2>
+                        <p>
+                            At <strong>Saint Helen Cafe</strong> we believe in good coffee, fresh food and an atmosphere
+                            where you feel right at home. Our rustic brick walls and comfortable seating invite you to
+                            enjoy breakfast, brunch or lunch with quality ingredients, vegetarian and vegan options,
+                            and always friendly service.
+                        </p>
+                        <p>
+                            Located in the heart of Hawthorn, every visit is an experience: the aroma of freshly ground
+                            coffee, warm light streaming through our windows and the sound of great conversation.
+                            Come discover why we're the neighbourhood's favourite corner.
+                        </p>
+                        <div class="about__tags">
+                            <span class="tag">🌱 Vegan options</span>
+                            <span class="tag">🥗 Healthy food</span>
+                            <span class="tag">☕ Specialty coffee</span>
+                            <span class="tag">🧱 Rustic space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section class="section section--dark" id="menu" aria-labelledby="menu-title">
+            <div class="container">
+                <h2 class="section__title fade-in" id="menu-title">Our Favourites</h2>
+                <p class="section__subtitle fade-in">Signature dishes prepared with love and the best ingredients</p>
+
+                <div class="menu-grid">
+                    <!-- Item 1: Good Morning Beirut -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <span class="menu-item__badge">Popular</span>
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Good Morning Beirut – flatbread with eggs, halloumi and zaatar"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Good Morning Beirut</h3>
+                            <p class="menu-item__desc">Crispy flatbread topped with eggs, grilled halloumi and aromatic zaatar.</p>
+                            <span class="menu-item__price">$18.50</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 2: Eggs Benedict -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <span class="menu-item__badge menu-item__badge--vegetarian">Vegetarian</span>
+                            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Eggs Benedict with hollandaise sauce and spinach"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Eggs Benedict</h3>
+                            <p class="menu-item__desc">Poached eggs on artisan bread with ham, hollandaise sauce and fresh spinach.</p>
+                            <span class="menu-item__price">$19.00</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 3: Shawarma -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Shawarma with pita bread and fresh vegetables"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Shawarma</h3>
+                            <p class="menu-item__desc">Delicious chicken or falafel shawarma with pita, fresh vegetables and tahini sauce.</p>
+                            <span class="menu-item__price">$16.50</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 4: New York Bagel -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="New York Bagel with cream cheese and toppings"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">New York Bagel</h3>
+                            <p class="menu-item__desc">Classic toasted bagel with cream cheese, smoked salmon or avocado and tomato.</p>
+                            <span class="menu-item__price">$14.50</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 5: Greens and Grains -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <span class="menu-item__badge menu-item__badge--vegan">Vegan</span>
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Greens and grains – vegan bowl with quinoa and vegetables"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Greens and Grains</h3>
+                            <p class="menu-item__desc">Nourishing bowl with quinoa, seasonal vegetables, kale, seeds and citrus dressing.</p>
+                            <span class="menu-item__price">$16.00</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 6: Corn Fritters with Avocado -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <span class="menu-item__badge menu-item__badge--vegetarian">Vegetarian</span>
+                            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Corn fritters with avocado and cherry tomatoes"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Corn Fritters with Avocado</h3>
+                            <p class="menu-item__desc">Golden corn fritters, creamy avocado, cherry tomatoes and yogurt sauce.</p>
+                            <span class="menu-item__price">$17.50</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 7: Specialty Coffee & Teas -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Specialty coffee with latte art"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Specialty Coffee & Teas</h3>
+                            <p class="menu-item__desc">Single-origin beans, impeccable latte art and a selection of premium teas.</p>
+                            <span class="menu-item__price">From $4.50</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 8: Homemade Desserts -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Homemade desserts including brownies and banana bread"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Homemade Desserts</h3>
+                            <p class="menu-item__desc">Brownies, banana bread and daily-baked cakes made fresh every morning.</p>
+                            <span class="menu-item__price">From $6.00</span>
+                        </div>
+                    </article>
+
+                    <!-- Item 9: Artisan Toast -->
+                    <article class="menu-item fade-in">
+                        <div class="menu-item__image">
+                            <span class="menu-item__badge">New</span>
+                            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Artisan toast with avocado and egg"
+                                 loading="lazy" decoding="async" width="800" height="600">
+                        </div>
+                        <div class="menu-item__content">
+                            <h3 class="menu-item__title">Artisan Toast</h3>
+                            <p class="menu-item__desc">Sourdough bread with creative combinations: avocado, egg, mushrooms and more.</p>
+                            <span class="menu-item__price">$13.50</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOURS & LOCATION -->
+        <section class="section section--cream" id="hours-location" aria-labelledby="hours-title">
+            <div class="container">
+                <h2 class="section__title fade-in" id="hours-title">Hours & Location</h2>
+                <p class="section__subtitle fade-in">We look forward to seeing you in Hawthorn</p>
+
+                <div class="hours-grid">
+                    <div class="hours-card fade-in">
+                        <h3 aria-label="Opening hours">🕐 Opening Hours</h3>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Monday</span>
+                            <span class="hours-row__time">7:00 AM – 2:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Tuesday</span>
+                            <span class="hours-row__time">7:00 AM – 2:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Wednesday</span>
+                            <span class="hours-row__time">7:00 AM – 2:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Thursday</span>
+                            <span class="hours-row__time">7:00 AM – 2:30 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Friday</span>
+                            <span class="hours-row__time">7:00 AM – 2:30 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-row__day">Saturday</span>
+                            <span class="hours-row__time">8:00 AM – 2:30 PM</span>
+                        </div>
+                        <div class="hours-row hours-row--closed">
+                            <span class="hours-row__day">Sunday</span>
+                            <span class="hours-row__time">Closed</span>
+                        </div>
+
+                        <div class="services">
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">🥡</span> Takeaway</span>
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">📞</span> Reservations</span>
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">♿</span> Accessibility</span>
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">📶</span> Free Wi-Fi</span>
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">🐶</span> Pet Friendly</span>
+                            <span class="service-item"><span class="service-item__icon" aria-hidden="true">💳</span> Cards Accepted</span>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper fade-in">
+                        <iframe
+                            src="https://www.google.com/maps?q=173+Riversdale+Rd,+Hawthorn+VIC+3122,+Australia&output=embed"
+                            title="Google map showing Saint Helen Cafe location"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            style="border:0;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section section--dark" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 class="section__title fade-in" id="testimonials-title">What Our Customers Say</h2>
+                <p class="section__subtitle fade-in">Real reviews from people who visit us</p>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial fade-in">
+                        <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial__text">
+                            "The best coffee in Hawthorn. The 'Good Morning Beirut' flatbread is spectacular and the
+                            brick-walled atmosphere is super cosy. The staff always make you feel welcome."
+                        </p>
+                        <span class="testimonial__author">Sarah M. — Google Reviews</span>
+                    </article>
+
+                    <article class="testimonial fade-in">
+                        <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial__text">
+                            "As a vegan, finding a place with delicious options like the Greens and Grains is a treasure.
+                            The coffee is top-notch and the homemade desserts are incredible. 100% recommended."
+                        </p>
+                        <span class="testimonial__author">Daniela R. — Facebook</span>
+                    </article>
+
+                    <article class="testimonial fade-in">
+                        <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial__text">
+                            "A perfect weekend brunch. The eggs Benedict are among the best I've ever had and the service
+                            is fast and friendly. The place has a special charm with its rustic bricks. I'll be back!"
+                        </p>
+                        <span class="testimonial__author">Michael T. — TripAdvisor</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section section--cream" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 class="section__title fade-in" id="contact-title">Contact</h2>
+                <p class="section__subtitle fade-in">Write to us or visit – we'll be happy to serve you</p>
+
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <div class="contact-item">
+                            <div class="contact-item__icon" aria-hidden="true">📍</div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>173 Riversdale Rd, Hawthorn VIC 3122, Australia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon" aria-hidden="true">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+61402222363" aria-label="Call +61 402 222 363">+61 402 222 363</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon" aria-hidden="true">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:hola@sainthelencafe.com.au">hola@sainthelencafe.com.au</a></p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://facebook.com/sainthelencafe" target="_blank" rel="noopener noreferrer"
+                               class="social-link" aria-label="Visit our Facebook page (opens in new tab)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/sainthelencafe" target="_blank" rel="noopener noreferrer"
+                               class="social-link" aria-label="Visit our Instagram page (opens in new tab)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto -->
+                    <div class="contact-form fade-in">
+                        <h3>Send us a message</h3>
+                        <form id="contactForm" novalidate method="post" action="/submit-form">
+                            <!-- Honeypot anti-spam -->
+                            <div class="form-group form-group--honeypot" aria-hidden="true">
+                                <label for="website">Website (do not fill)</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required
+                                       autocomplete="name" maxlength="100" minlength="2">
+                                <span class="error-message" id="error-name">Please enter your name (min. 2 characters).</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com" required
+                                       autocomplete="email" maxlength="100" pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+                                <span class="error-message" id="error-email">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="How can we help? Tell us about reservations, events or any questions." required
+                                          maxlength="1000" minlength="10"></textarea>
+                                <span class="error-message" id="error-message">Your message should be at least 10 characters.</span>
+                            </div>
+                            <button type="submit" class="btn btn--green">Send Message</button>
+                            <div class="form-success" id="formSuccess" role="status">
+                                ✅ Thank you for writing! We'll get back to you as soon as possible.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensaje 404 si hash no coincide -->
+        <section class="not-found" id="notFound" hidden>
+            <div class="not-found__code">404</div>
+            <p class="not-found__message">Oops! The page you are looking for does not exist.</p>
+            <a href="#home" class="btn btn--primary">Back to Home</a>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__logo">☕ Saint Helen <span class="logo__highlight">Cafe</span></div>
+        <div class="footer__social">
+            <a href="https://facebook.com/sainthelencafe" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://instagram.com/sainthelencafe" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+        </div>
+        <p class="footer__info">
+            173 Riversdale Rd, Hawthorn VIC 3122, Australia · +61 402 222 363
+        </p>
+        <p class="footer__info">
+            Mon–Wed: 7:00 AM – 2:00 PM · Thu–Fri: 7:00 AM – 2:30 PM · Sat: 8:00 AM – 2:30 PM · Sun: Closed
+        </p>
+        <div class="footer__copyright">
+            © 2026 Saint Helen Cafe. All rights reserved. · Made with <span class="footer__heart" aria-hidden="true">❤️</span> in Melbourne
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT (defer) ==================== -->
+    <script defer>
+        (function() {
+            'use strict';
+
+            // ===== MENÚ HAMBURGUESA (móvil) =====
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+
+            function toggleMobileMenu(open) {
+                const isOpen = open !== undefined ? open : !mobileNav.classList.contains('is-open');
+                mobileNav.classList.toggle('is-open', isOpen);
+                hamburger.classList.toggle('active', isOpen);
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', () => toggleMobileMenu());
+
+            // Cerrar menú al hacer clic en un enlace
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => toggleMobileMenu(false));
+            });
+
+            // ===== HEADER CON EFECTO SCROLL =====
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            function handleScroll() {
+                const currentScroll = window.scrollY;
+                header.classList.toggle('is-scrolled', currentScroll > 80);
+
+                // Resaltar enlace activo según sección visible
+                const sections = document.querySelectorAll('main section[id]');
+                let currentSectionId = '';
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 120 && rect.bottom >= 120) {
+                        currentSectionId = section.id;
+                    }
+                });
+
+                document.querySelectorAll('.nav__link:not(.nav__link--book)').forEach(link => {
+                    const href = link.getAttribute('href').substring(1);
+                    if (href === currentSectionId) {
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+
+                lastScroll = currentScroll;
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+
+            // ===== ANIMACIONES FADE-IN (Intersection Observer) =====
+            const fadeElements = document.querySelectorAll('.fade-in');
+            if ('IntersectionObserver' in window) {
+                const fadeObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            fadeObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                fadeElements.forEach(el => fadeObserver.observe(el));
+            } else {
+                fadeElements.forEach(el => el.classList.add('is-visible'));
+            }
+
+            // ===== FORMULARIO DE CONTACTO (validación robusta) =====
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const errorName = document.getElementById('error-name');
+            const errorEmail = document.getElementById('error-email');
+            const errorMessage = document.getElementById('error-message');
+
+            function validateField(input, errorEl, condition) {
+                const formGroup = input.closest('.form-group');
+                if (!condition) {
+                    formGroup.classList.add('has-error');
+                    errorEl.style.display = 'block';
+                    return false;
+                } else {
+                    formGroup.classList.remove('has-error');
+                    errorEl.style.display = 'none';
+                    return true;
+                }
+            }
+
+            function validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            function validateForm() {
+                const isNameValid = validateField(nameInput, errorName, nameInput.value.trim().length >= 2);
+                const isEmailValid = validateField(emailInput, errorEmail, validateEmail(emailInput.value.trim()));
+                const isMessageValid = validateField(messageInput, errorMessage, messageInput.value.trim().length >= 10);
+                return isNameValid && isEmailValid && isMessageValid;
+            }
+
+            // Validación en tiempo real al perder el foco
+            [nameInput, emailInput, messageInput].forEach(input => {
+                input.addEventListener('blur', () => {
+                    if (input === nameInput) validateField(input, errorName, input.value.trim().length >= 2);
+                    if (input === emailInput) validateField(input, errorEmail, validateEmail(input.value.trim()));
+                    if (input === messageInput) validateField(input, errorMessage, input.value.trim().length >= 10);
+                });
+            });
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Honeypot: si el campo website está lleno, es spam
+                const websiteField = document.getElementById('website');
+                if (websiteField && websiteField.value.trim() !== '') {
+                    console.warn('Spam detected, form not submitted.');
+                    return;
+                }
+
+                if (!validateForm()) {
+                    // Mostrar errores y enfocar el primer campo inválido
+                    const firstError = contactForm.querySelector('.has-error input, .has-error textarea');
+                    if (firstError) firstError.focus();
+                    return;
+                }
+
+                // Simulación de envío exitoso
+                formSuccess.classList.add('is-visible');
+                contactForm.reset();
+
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    formSuccess.classList.remove('is-visible');
+                }, 5000);
+            });
+
+            // ===== SMOOTH SCROLL CON OFFSET =====
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 70;
+                        const position = target.offsetTop - headerOffset;
+                        window.scrollTo({ top: position, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // ===== MANEJO DE 404 PARA HASH NO VÁLIDO =====
+            function checkHash() {
+                const hash = window.location.hash;
+                const validIds = ['home', 'about', 'menu', 'hours-location', 'testimonials', 'contact'];
+                const notFoundSection = document.getElementById('notFound');
+
+                if (hash && !validIds.includes(hash.substring(1))) {
+                    // Ocultar todas las secciones normales y mostrar 404
+                    document.querySelectorAll('main > section:not(#notFound)').forEach(sec => sec.hidden = true);
+                    notFoundSection.hidden = false;
+                } else {
+                    document.querySelectorAll('main > section:not(#notFound)').forEach(sec => sec.hidden = false);
+                    notFoundSection.hidden = true;
+                }
+            }
+
+            window.addEventListener('hashchange', checkHash);
+            // Verificar al cargar
+            checkHash();
+
+            // ===== INICIALIZACIÓN: elementos visibles en el viewport =====
+            window.addEventListener('load', () => {
+                // Mostrar elementos que ya están visibles
+                const viewportHeight = window.innerHeight;
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < viewportHeight && rect.bottom > 0) {
+                        el.classList.add('is-visible');
+                        if ('IntersectionObserver' in window) {
+                            // No es necesario unobserve si usamos observer global
+                        }
+                    }
+                });
+                handleScroll(); // para estado inicial del header
+            });
+
+        })();
+    </script>
+</body>
+</html>
